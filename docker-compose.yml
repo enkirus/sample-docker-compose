@@ -1,0 +1,14 @@
+# version of docker compose which we are using
+version: '3'
+
+#usually we mean container 
+services: 
+    redis-server:
+        image: 'redis'
+    node-app:
+        # this means we are saying to look into current di
+        #directory to see the file, to build
+        build: .
+        ports: 
+            - "4010:8081"
+    
